@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "051c7db7-3a7d-4fef-9ea4-3a38b101d619",
+		"name": "SimpleBanking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3813057"
+	},
+	"item": [
+		{
+			"name": "Create an Account",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner\": \"Adem Çakmak\",\n    \"accountNumber\": \"123-456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an account",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/account/123-456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"123-456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Credit",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/credit/123-456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"credit",
+						"123-456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "debit",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/debit/123-456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"debit",
+						"123-456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phoneBill",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 75\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/phoneBillPayment/123-456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"phoneBillPayment",
+						"123-456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followRedirects": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 67\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/check/123-456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"check",
+						"123-456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

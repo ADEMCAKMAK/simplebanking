@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: "simple-banking"
+#  jackson:
+#    serialization:
+#      fail-on-empty-beans: false
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:file:./data/simpleBankingDB
+    username: DBUser
+    password: 1
+    driverClassName: org.h2.Driver
+  jpa:
+    hibernate.ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
